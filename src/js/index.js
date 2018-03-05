@@ -1,7 +1,20 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ComponentHeader from './components/header';
+import ComponentFooter from './components/footer';
+import ComponentIndexBody from './components/indexBody';
+import 'antd/dist/antd.css';
 
-ReactDOM.render(
-	<h1>Hello World!!!!!</h1>,
-	document.getElementById('example')
-);
+class Index extends React.Component{
+	render(){
+		return (
+			<div>
+				<ComponentHeader/>
+				<ComponentIndexBody userId='123erte' userName='Feiger'/>
+				<ComponentFooter/>
+			</div>
+		)
+	}
+}
+
+// ReactDOM.render(<Index/>,document.getElementById('example'));
